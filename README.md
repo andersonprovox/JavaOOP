@@ -88,5 +88,62 @@ public class App {
 }
 ```
 
+### Passagem de parâmetros
+Quando se passa um objeto como parâmetro, o que é passado é a sua referência. As alterações nesses parâmetros 
+refletem fora do método.
+
+Parâmetros sempre passam uma cópia do valor não uma referência ao valor. Quando passado um parâmetro do tipo primitivo
+as alterações nele não refletem fora.
+
+### Sobrecarga de métodos
+Sobre carga é definir métodos diferentes com o mesmo nome. Se conportam de forma diferente.
+
+Somente é possível fazer a sobrecarga de um método quando se altera o tipo do parâmetro ou se insere mais parâmetros
+para a sobre carga.
+
+Não é possível fazer sobrecarga de métodos usando o mesmo nome mas alterando o seu tipo de retorno.
+```java
+public class Account {
+    boolean deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            return true;
+        }
+        return false;
+    }
+
+    boolean deposit(String amount) {
+        return deposit(Double.parseDouble(amount));
+    }
+}
+```
+Cuidado para não chamar o mesmo método dentro dele mesmo, pois assim vai criar o erro `StackOverFlowError`
+que é um erro que aparece quando algo entra em loop infinito.
+```java
+public class Account {
+    //vai gerar um StackOverFlowError
+    boolean deposit(String amount) {
+        return deposit(amount);
+    }
+}
+```
+### Inicializando atributos em objetos
+
+Atributos quando não definido um valor, ele assume um, isso não acontece com tipos primitivos criados no Java isso acontece
+somente nos atributos de uma classe.
+
+a memória HEAP funciona por referência, por isso define valores por padrão como zero em tipos numéricos e atribui `null`
+a tipos de objetos.
+
+uma variável de tripo primitivo definida ela é criada dentro da memória Stack por isso não pode ser criada sem um valor inicial,
+O que é criado no HEAP não é afetado por essa regra.
+
+Os atributos de uma classe quando não definidos de uma valor, o Java atribui esse valor automaticamente:
+- 0 para numéricos
+- null para texto
+- false para booleano
+
+Quando criada uma variável local dentro de um método, então esta deve ser incializada explicitamente.
+
 
 ## Exercícios

@@ -13,12 +13,21 @@ public class Account {
         return false;
     }
 
+    boolean deposit(String amount) {
+        return deposit(Double.parseDouble(amount));
+    }
+
     boolean withdraw(double amount) {
         if (amount > 0) {
             balance -= amount;
             return true;
         }
         return false;
+    }
+
+    void transfer(double amount, Account targetAccount) {
+        withdraw(amount);
+        targetAccount.deposit(amount);
     }
     //método sem retorno sem parâmetro
     void printBalance() {
