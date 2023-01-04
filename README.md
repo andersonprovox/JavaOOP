@@ -39,6 +39,19 @@ que não são mais acessíveis.
 
 A Memória Stack se limpa sozinha no final da execução do método.
 
+Ainda mencionando sobre memória Stack e Heap, segue a definição no livro Head First C:
+> **Heap** é a seção de memória onde o programa armazena dados que devem estar disponíveis por um tempo maior. É uma solução
+> pois é difícil conseguir espaços maiores na _Stack_ em tempo de execução,
+> podemos considerar que o armazenamento é dinâmico. [¹]
+
+> **Stack** é a seção da memória para variáveis locais e cada variável desaparece
+> assim que sair da função, o armazenamento é estático.[²]
+
+> No C quando se está manipulando memória é necessário fazer uso de funções que gerenciam o espaço
+> alocado na Heap, pois caso contrário pode acontecer vazamento de memória, nesse ponto
+> que o **Garbage Collector** do Java faz diferença, pois a JVM vai atuar automaticamente para que isso não aconteça.[³]
+
+
 ## Por dentro dos métodos
 Definem o comportamento de uma classe, coisas que o objeto de uma classe pode fazer.
 
@@ -147,3 +160,6 @@ Quando criada uma variável local dentro de um método, então esta deve ser inc
 
 
 ## Exercícios
+
+## Referências
+[¹²³] Head First C - Altabooks - Cap. 6 Pág. 278 - David & Dawn Griffiths
