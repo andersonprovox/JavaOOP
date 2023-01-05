@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc15d48a-02e0-40f9-9afc-bff2e0ec67d4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ExFraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ExWatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Fraction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pointer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Watch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -39,7 +44,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.App2">
+  <component name="RunManager" selected="Application.ExWatch">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App" />
       <module name="JavaOO" />
@@ -54,8 +59,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExFraction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ExFraction" />
+      <module name="JavaOO" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExWatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ExWatch" />
+      <module name="JavaOO" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExWatch" />
+        <item itemvalue="Application.ExFraction" />
         <item itemvalue="Application.App2" />
         <item itemvalue="Application.App" />
       </list>

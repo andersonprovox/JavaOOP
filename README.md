@@ -158,8 +158,29 @@ Os atributos de uma classe quando não definidos de uma valor, o Java atribui es
 
 Quando criada uma variável local dentro de um método, então esta deve ser incializada explicitamente.
 
+### Entendendo ua NullPointerException
+Traduzindo seria erro de referências nulas.
+O Java possui um conjunto de exceções para erros que acontecem no código.
+
+Erro de quando não é possível encontrar o objeto ou quando ele é nulo.
+
+```java
+public class NullReference {
+    public static void main (String[] args) {
+        Account a = null;
+        a.printBlalance();
+    }
+}
+```
+
+## Construindo e encapsulando objetos
+
 
 ## Exercícios
+ 
+- Exfraction.java : Fraction.java
+- ExWatch.java : Watch.java : Pointer.java 
+
 
 ## Referências
 [¹²³] Head First C - Altabooks - Cap. 6 Pág. 278 - David & Dawn Griffiths
