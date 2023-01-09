@@ -174,6 +174,82 @@ public class NullReference {
 ```
 
 ## Construindo e encapsulando objetos
+### criando uma classe com visibilidade public
+Se houver uma classe pública dentro de um arquivo Java então a classe e o arquivo devem ter o mesmo nome.
+
+Não é comum ter mais de uma classe por arquivo.
+
+A classe criada como public no arquivo é uma _top level class_.
+
+### Encapsulamento
+Quando a um objeto deve esconder do mundo externo tudo que é do seu comportamento interno.
+
+Geralmente os **atributos são definidos como private** `private String accountNumber`e os **métodos como public**. Lógico que na questão dos
+métodos isso vai depender das regras da sua aplicação.
+
+### getters e setters
+- **getter:** método que retorna o valor de um atributo
+- **setter:** método que atribui valor para um atributo
+
+deve ser usado somente para os casos que fazem sentido.
+
+```java
+public class EncapsulatedAccount {
+    //Atributos da classe
+    private String accountNumber;
+    private String accountOwner;
+    private double balance;
+    //exemplo de getter
+    public String getAccountOwner() {
+        return accountOwner;
+    }
+    //exemplo  de setter
+    public void setAccountOwner(String accountOwner) {
+        this.accountOwner = accountOwner;
+    }
+}
+```
+
+### Definindo construtores da classe
+- Construtor é uma especie de método para construir coisas e executar algo durante o tempo de execução de uma aplicação.
+- Toda classe em JAva tem um construtor, se vc não criar o Java cria um automaticamente.
+- Tem cara de método, mas não tem nenhum tipo de retorno.
+- Obrigatório ter o mesmo nome da classe.
+- Pode passar informações como passa para os métodos
+- Também suportam sobrecarga
+
+Exemplo de construtor: 
+```java
+public class Account {
+    public Account {
+        System.out.println("Construtor chamado");
+    }
+}
+```
+Sempre ativado quando chamado `var account1 = new Account();`.
+
+### Construtores que chamam construtores
+
+Isso é útil quando queremos inicializar um objeto de várias formas diferentes.
+
+Para evitar repetir código durante essas chamadas com esses construtores o que podemos fazer é criar um construtor
+genérico com todos os atributos sendo chamados nele e com os demais construtores fazer referência ao construtor genérico.
+
+Para isso fazemos o uso do `this()`, assim fazemos referência ao construtor genérico. o arquivo `EncapsulatedAccount.java`,
+entre as linhas 8 a 24, tem o exemplo do uso de sobre carga de construtor e reuso dos atributos no construtor genérico
+pelos construtores mais específicos.
+
+Neste caso `this()` deve ser a primeira coisa a vir depois da criação do construtor, senão dará erro.
+
+### Modificador final em atributos
+É um modificador de nome final usado em atributos que não terão seus valores reatribuídos durante o tempo de execução
+da aplicação, comportamento semelhante a de uma constante.
+
+Quando o usado o final é obrigatório a passar de um valor para o atributo. isso pode ser atribuido no construtor.
+
+Com final é bloqueada a atribuição que altera a referência.
+Não consegue alterar a variável, mas o objeto ao qual ela aponta isso pode ser feito o final não blolqueia essa alteração.
+
 
 
 ## Exercícios
