@@ -256,6 +256,8 @@ Não consegue alterar a variável, mas o objeto ao qual ela aponta isso pode ser
  
 - Exfraction.java : Fraction.java
 - ExWatch.java : Watch.java : Pointer.java 
+- ExLamp.java : Lamp.java
+- ExRectangle : Reactangle.java
 
 
 ## Referências
