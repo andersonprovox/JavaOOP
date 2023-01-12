@@ -250,6 +250,13 @@ Quando o usado o final é obrigatório a passar de um valor para o atributo. iss
 Com final é bloqueada a atribuição que altera a referência.
 Não consegue alterar a variável, mas o objeto ao qual ela aponta isso pode ser feito o final não blolqueia essa alteração.
 
+### Definindo atributos estáticos
+
+Static é vinculado à classe e não na instância. então os objetos vão compartilhar um mesmo atributo da classe.
+`private static int ccurrentId = 1`, usando a palavra reservada.
+
+Portanto quando um construtor chamar e fizer alguma alteração quando instanciado o objeto, então o currentId será alterado,
+essa alteração continuará valendo para o próximo objeto que for instanciado.
 
 
 ## Exercícios

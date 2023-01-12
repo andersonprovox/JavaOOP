@@ -4,12 +4,16 @@ public class EncapsulatedAccount {
     private final String accountNumber;
     private final String accountOwner;
     private double balance;
+
+    private static int currentId = 1;
     //Construtor Genérico
     public EncapsulatedAccount(String accountNumber, String accountOwner, double balance) {
-        this.accountNumber = accountNumber;
+        this.accountNumber = "000" + currentId++;
         this.accountOwner = accountOwner;
         this.balance = balance;
     }
+
+
     //Demais construtores específicos fazendo uso do genérico
     public EncapsulatedAccount(String accountNumber) {
         this(accountNumber, null, 0);
