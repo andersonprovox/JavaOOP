@@ -1,3 +1,5 @@
+package br.com.javainsider.parteum;
+
 public class ExWatch {
     public static void main(String[] args) {
         Watch reloj = new Watch();

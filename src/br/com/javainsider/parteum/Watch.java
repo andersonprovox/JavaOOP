@@ -1,3 +1,5 @@
+package br.com.javainsider.parteum;
+
 public class Watch {
 
     Pointer hour = new Pointer();

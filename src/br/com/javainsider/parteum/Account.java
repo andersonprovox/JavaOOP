@@ -1,3 +1,5 @@
+package br.com.javainsider.parteum;
+
 public class Account {
     //Atributos da classe
     String accountNumber;

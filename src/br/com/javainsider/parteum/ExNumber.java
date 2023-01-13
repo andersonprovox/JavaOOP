@@ -1,3 +1,5 @@
+package br.com.javainsider.parteum;
+
 public class ExNumber {
     public static void main(String[] args) {
         Number firstNumber = new Number();

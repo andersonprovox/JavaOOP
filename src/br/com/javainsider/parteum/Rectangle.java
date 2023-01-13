@@ -1,3 +1,5 @@
+package br.com.javainsider.parteum;
+
 public class Rectangle {
     private final double height;
     private final double base;

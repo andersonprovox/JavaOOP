@@ -1,3 +1,5 @@
+package br.com.javainsider.parteum;
+
 public class Number {
     private int numberOne;
     private int numberTwo;

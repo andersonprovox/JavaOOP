@@ -1,4 +1,4 @@
-package br.com.javainsider;
+package br.com.javainsider.parteum;
 
 public class Number2 {
     private static int instances;

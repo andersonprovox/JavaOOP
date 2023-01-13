@@ -1,3 +1,5 @@
+package br.com.javainsider.parteum;
+
 public class App {
     public static void main(String[] args) {
         //instancia do objeto de acordo com a classe

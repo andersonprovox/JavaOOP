@@ -1,4 +1,4 @@
-package br.com.javainsider;
+package br.com.javainsider.parteum;
 
 public class exNumber2 {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package br.com.javainsider.parteum;
+
 public class ExFraction {
     public static void main(String[] args) {
         Fraction f1 = new Fraction();

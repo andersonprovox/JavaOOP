@@ -57,7 +57,7 @@ Definem o comportamento de uma classe, coisas que o objeto de uma classe pode fa
 
 Quando não vamos retornar valores em um método colocamos a palavra inicial `void`.
 ```java
-public class Account {
+public class br.com.javainsider.parteum.Account {
     //Atributos da classe
     String accountNumber;
     String accountOwner;
@@ -79,7 +79,10 @@ public class Account {
 - Quando depois de instanciar um objeto vamos passar um valor conforme um parâmetro já estabelecido na classe isso se chama _argumento_
 
 Fazendo uso dos atributos e métodos da classe após instanciar o objeto:
+
 ```java
+import br.com.javainsider.parteum.Account;
+
 public class App {
     public static void main(String[] args) {
         //instancia do objeto de acordo com a classe
@@ -116,7 +119,7 @@ para a sobre carga.
 
 Não é possível fazer sobrecarga de métodos usando o mesmo nome mas alterando o seu tipo de retorno.
 ```java
-public class Account {
+public class br.com.javainsider.parteum.Account {
     boolean deposit(double amount) {
         if (amount > 0) {
             balance += amount;
@@ -133,7 +136,7 @@ public class Account {
 Cuidado para não chamar o mesmo método dentro dele mesmo, pois assim vai criar o erro `StackOverFlowError`
 que é um erro que aparece quando algo entra em loop infinito.
 ```java
-public class Account {
+public class br.com.javainsider.parteum.Account {
     //vai gerar um StackOverFlowError
     boolean deposit(String amount) {
         return deposit(amount);
@@ -165,8 +168,10 @@ O Java possui um conjunto de exceções para erros que acontecem no código.
 Erro de quando não é possível encontrar o objeto ou quando ele é nulo.
 
 ```java
+import br.com.javainsider.parteum.Account;
+
 public class NullReference {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         Account a = null;
         a.printBlalance();
     }
@@ -194,7 +199,7 @@ métodos isso vai depender das regras da sua aplicação.
 deve ser usado somente para os casos que fazem sentido.
 
 ```java
-public class EncapsulatedAccount {
+public class br.com.javainsider.parteum.EncapsulatedAccount {
     //Atributos da classe
     private String accountNumber;
     private String accountOwner;
@@ -220,13 +225,13 @@ public class EncapsulatedAccount {
 
 Exemplo de construtor: 
 ```java
-public class Account {
-    public Account {
+public class br.com.javainsider.parteum.Account {
+    public br.com.javainsider.parteum.Account {
         System.out.println("Construtor chamado");
     }
 }
 ```
-Sempre ativado quando chamado `var account1 = new Account();`.
+Sempre ativado quando chamado `var account1 = new br.com.javainsider.parteum.Account();`.
 
 ### Construtores que chamam construtores
 
@@ -235,7 +240,7 @@ Isso é útil quando queremos inicializar um objeto de várias formas diferentes
 Para evitar repetir código durante essas chamadas com esses construtores o que podemos fazer é criar um construtor
 genérico com todos os atributos sendo chamados nele e com os demais construtores fazer referência ao construtor genérico.
 
-Para isso fazemos o uso do `this()`, assim fazemos referência ao construtor genérico. o arquivo `EncapsulatedAccount.java`,
+Para isso fazemos o uso do `this()`, assim fazemos referência ao construtor genérico. o arquivo `br.com.javainsider.parteum.EncapsulatedAccount.java`,
 entre as linhas 8 a 24, tem o exemplo do uso de sobre carga de construtor e reuso dos atributos no construtor genérico
 pelos construtores mais específicos.
 
@@ -338,9 +343,9 @@ package br.com.javainsider.app;
 public class app9 {
     public static void main(String[] args) {
         // sem usar o fully qualified name
-        Account a = new Account();
+        br.com.javainsider.parteum.Account a = new br.com.javainsider.parteum.Account();
         //Usando o fully qualified name
-        br.com.javainsider.account.Account a = new br.com.javainsider.account.Account();
+        br.com.javainsider.account.br.com.javainsider.parteum.Account a = new br.com.javainsider.account.br.com.javainsider.parteum.Account();
     }
 }
 ```
@@ -348,13 +353,13 @@ PAra evitar esse uso extensivo podemos usar o import para manter o código legí
 e antes da definição da classe.
 ```java
 package br.com.javainsider.app;
-import br.com.javainsider.account.Account;
+import br.com.javainsider.account.br.com.javainsider.parteum.Account;
 public class app9 {
     public static void main(String[] args) {
         
-        Account a = new Account();
+        br.com.javainsider.parteum.Account a = new br.com.javainsider.parteum.Account();
         
-        Account b = new Account();
+        br.com.javainsider.parteum.Account b = new br.com.javainsider.parteum.Account();
     }
 }
 ```
@@ -366,9 +371,9 @@ import br.com.javainsider.account.*;
 public class app9 {
     public static void main(String[] args) {
         
-        Account a = new Account();
+        br.com.javainsider.parteum.Account a = new br.com.javainsider.parteum.Account();
         
-        Account b = new Account();
+        br.com.javainsider.parteum.Account b = new br.com.javainsider.parteum.Account();
     }
 }
 ```
@@ -409,12 +414,13 @@ public class App11 {
 ```
 
 ## Exercícios
- 
-- Exfraction.java : Fraction.java
-- ExWatch.java : Watch.java : Pointer.java 
-- ExLamp.java : Lamp.java
+### Inseridos no pacote parteum
+- Exfraction.java : br.com.javainsider.parteum.Fraction.java
+- br.com.javainsider.parteum.ExWatch.java : br.com.javainsider.parteum.Watch.java : br.com.javainsider.parteum.Pointer.java 
+- br.com.javainsider.parteum.ExLamp.java : br.com.javainsider.parteum.Lamp.java
 - ExRectangle : Reactangle.java
-- ExNumber.java : Number.java
+- br.com.javainsider.parteum.ExNumber.java : br.com.javainsider.parteum.Number.java
+### Inseridos no pacote partedois
 
 
 ## Referências
