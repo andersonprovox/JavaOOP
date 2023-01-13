@@ -258,6 +258,60 @@ Static é vinculado à classe e não na instância. então os objetos vão compa
 Portanto quando um construtor chamar e fizer alguma alteração quando instanciado o objeto, então o currentId será alterado,
 essa alteração continuará valendo para o próximo objeto que for instanciado.
 
+### Definindo métodos estáticos
+Estes são definidos da mesma forma que os atributos.
+
+Não é necessário instanciar um objeto quando um atributo ou métodos está estático.
+```java
+public class Example {
+    public static void main(String[] args) {
+        //chamando o método estático diretamente sem instânciar
+        int id = IdGenereatadAccount.getCurrentId();
+        
+    }
+}
+```
+
+- métodos estáticos só podem manipular atributos estáticos
+- métodos não estaticos conseguem manipular atributos estáticos
+
+### Usando bloco static para inicializar atributos estáticos
+Construtores não se aplicam com static.
+
+Static block fica dentro da classe vem depois dos atributos e antes dos métodos. Tudo dentro desse bloco tem que
+ter os itens estáticos da classe.
+
+Este bloco é executado apenas uma vez, então é garantido que ele vai ser executado dentro da aplicação.
+
+```java
+public class Example {
+    private static int currentId;
+    //definindo o static block
+    static {
+        currentId = 1;
+    }
+}
+```
+
+### Exemplos de elementos estáticos na API do JAVA
+
+O famoso método main é static. Ele é definido assim pois a JVM vai procurar qual o método para ser executado para a inicialização
+da aplicação, portanto com este static esse método pode ser executado sem instância.
+
+O out do System também é static. Métodos da class Math, também são.
+
+### Constantes no Java
+Não tem o conceito definido, mas modificadores podem fazer com que a definição de constantes seja possível.
+
+```java
+public class ConstantExample {
+    // No java Constantes são definidas em uppercase, isso é convenção de boas práticas
+    // este é um exemplo de definir constantes no Java.
+    private static final int INITIAL_VALUE = 10;
+}
+```
+Uma constante até pode usar public, pois conforme não é alterada, então não corre o risco de alterações indevidas.
+
 
 ## Exercícios
  
