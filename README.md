@@ -312,6 +312,101 @@ public class ConstantExample {
 ```
 Uma constante até pode usar public, pois conforme não é alterada, então não corre o risco de alterações indevidas.
 
+### Controlando a criação de objetos
+PAra se obter um ganho de espaço na memória é possível através do construtor criar e instanciar os objetos da classe dentro
+da própria classe, para que não seja instanciado fora dela, o construtor adquire o modificado de acsso private, mais detalhes
+na classe Number2.java na linha 5 deste projeto.
+## Organizando código-fonte em pacotes
+
+### Dividindo codigo-fonte em pacotes
+Para organização de arquivos e bibliotecas dentro do projeto.
+
+### Usando p package para definir o pacote de uma classe
+
+Deve usar a notação package para informar ao Java a localização da classe que está usando, isso não é feito automaticamente.
+```java
+package br.com.javainsider;
+```
+### Importando classes de outro pacote
+A instancia de forma simples acontece quando classes estão no mesmo pacote.
+PAra conseguir instanciar um classe de outro pacote deve usar o conceito de _Fully Qualified name_ qie será fazer o import completo
+usando o nome do pacote da classe junto com a classe.
+
+```java
+package br.com.javainsider.app;
+
+public class app9 {
+    public static void main(String[] args) {
+        // sem usar o fully qualified name
+        Account a = new Account();
+        //Usando o fully qualified name
+        br.com.javainsider.account.Account a = new br.com.javainsider.account.Account();
+    }
+}
+```
+PAra evitar esse uso extensivo podemos usar o import para manter o código legível. O import deve ser usado depois do package
+e antes da definição da classe.
+```java
+package br.com.javainsider.app;
+import br.com.javainsider.account.Account;
+public class app9 {
+    public static void main(String[] args) {
+        
+        Account a = new Account();
+        
+        Account b = new Account();
+    }
+}
+```
+Quando vai usar todas as classes de um pacote, pode usar o * para dizer que vai usar qualquer classe do mesmo.
+
+```java
+package br.com.javainsider.app;
+import br.com.javainsider.account.*;
+public class app9 {
+    public static void main(String[] args) {
+        
+        Account a = new Account();
+        
+        Account b = new Account();
+    }
+}
+```
+
+### Imports automáticos do Java.lang
+O pacote java.lang é uma classe especial do Java, portanto não será necessário ao fazer uso de métodos dela importar na
+sua aplicação, os itens dessa classe são muito utilizados, por exemplo, `String` que usamos para criar strings na aplicação.
+
+### tratamento de ambiguidade de nome de classes
+Quando for importar uma classe com o mesmo nome de pacotes diferentes isso vai dar erro, pode resolver usando o 
+_fully qualified name._ nesse caso pode importar as duas com o FQN ou você pode importar uma usando import e uma outra
+que for usar fazer o uso do FQN.
+
+### Visibilidade usando package
+Quando não usamos modificadores de acesso, o Java atribui uma visibilidade default que é chamada de package, isso diz que
+por padrão a classe é visualizada dentro do pacote.
+
+Caso seja necessário que elementos da classe sejam visualizados por outro pacote o modificador de acesso deve ser `public`.
+
+### Importando elementos estáticos
+É possível importar elementos estáticos, isso pode auxiliar no momento de reduzir o uso de uma classe e seus métodos.
+
+```java
+package br.com.javainsider.app;
+
+import static java.lang.Math.*;
+
+public class App11 {
+    public static void main(String[] args) {
+        //sem o import static ficaria: Math.pow(3, 2);
+        double n = pow(3, 2);
+        //sem o import static ficaria: Math.PI;
+        double pi = PI;
+        //sem o import static ficaria: Math.abs(-10);
+        double x = abs(-10);
+    }
+}
+```
 
 ## Exercícios
  
@@ -319,6 +414,7 @@ Uma constante até pode usar public, pois conforme não é alterada, então não
 - ExWatch.java : Watch.java : Pointer.java 
 - ExLamp.java : Lamp.java
 - ExRectangle : Reactangle.java
+- ExNumber.java : Number.java
 
 
 ## Referências

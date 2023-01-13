@@ -5,6 +5,7 @@ public class ExNumber {
 
         System.out.println(secondNumber.add(4, 6));
         System.out.println(firstNumber.add(2, 4));
+
         System.out.println(firstNumber.getAmountObject());
     }
 }
