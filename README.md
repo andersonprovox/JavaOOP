@@ -57,7 +57,7 @@ Definem o comportamento de uma classe, coisas que o objeto de uma classe pode fa
 
 Quando não vamos retornar valores em um método colocamos a palavra inicial `void`.
 ```java
-public class br.com.javainsider.parteum.Account {
+public class Account {
     //Atributos da classe
     String accountNumber;
     String accountOwner;
@@ -119,7 +119,7 @@ para a sobre carga.
 
 Não é possível fazer sobrecarga de métodos usando o mesmo nome mas alterando o seu tipo de retorno.
 ```java
-public class br.com.javainsider.parteum.Account {
+public class Account {
     boolean deposit(double amount) {
         if (amount > 0) {
             balance += amount;
@@ -136,7 +136,7 @@ public class br.com.javainsider.parteum.Account {
 Cuidado para não chamar o mesmo método dentro dele mesmo, pois assim vai criar o erro `StackOverFlowError`
 que é um erro que aparece quando algo entra em loop infinito.
 ```java
-public class br.com.javainsider.parteum.Account {
+public class Account {
     //vai gerar um StackOverFlowError
     boolean deposit(String amount) {
         return deposit(amount);
@@ -199,7 +199,7 @@ métodos isso vai depender das regras da sua aplicação.
 deve ser usado somente para os casos que fazem sentido.
 
 ```java
-public class br.com.javainsider.parteum.EncapsulatedAccount {
+public class EncapsulatedAccount {
     //Atributos da classe
     private String accountNumber;
     private String accountOwner;
@@ -225,8 +225,8 @@ public class br.com.javainsider.parteum.EncapsulatedAccount {
 
 Exemplo de construtor: 
 ```java
-public class br.com.javainsider.parteum.Account {
-    public br.com.javainsider.parteum.Account {
+public class bAccount {
+    public Account {
         System.out.println("Construtor chamado");
     }
 }
