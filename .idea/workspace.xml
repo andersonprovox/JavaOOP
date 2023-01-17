@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc15d48a-02e0-40f9-9afc-bff2e0ec67d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/Number2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/exNumber2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/account/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/account/SavingsAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/app/App1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ExNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExNumber.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,35 +51,35 @@
   </component>
   <component name="RunManager" selected="Application.ExNumber">
     <configuration name="ExFraction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ExFraction" />
+      <option name="MAIN_CLASS_NAME" value="br.com.javainsider.parteum.ExFraction" />
       <module name="JavaOO" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ExLamp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ExLamp" />
+      <option name="MAIN_CLASS_NAME" value="br.com.javainsider.parteum.ExLamp" />
       <module name="JavaOO" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ExNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ExNumber" />
+      <option name="MAIN_CLASS_NAME" value="br.com.javainsider.parteum.ExNumber" />
       <module name="JavaOO" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ExRetangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ExRetangle" />
+      <option name="MAIN_CLASS_NAME" value="br.com.javainsider.parteum.ExRetangle" />
       <module name="JavaOO" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ExWatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ExWatch" />
+      <option name="MAIN_CLASS_NAME" value="br.com.javainsider.parteum.ExWatch" />
       <module name="JavaOO" />
       <method v="2">
         <option name="Make" enabled="true" />

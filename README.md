@@ -412,6 +412,121 @@ public class App11 {
     }
 }
 ```
+## Herança entre classes
+Relação de mãe e filho, o filho herda determinados atributos da classe pai ou mãe, mas podemos chamar de superclasse.
+### Motivos para usar herança
+- Evitar repetição de métodos e atributos entre classes relacionadas.
+- A classe que herda(subclasse) é um tipo específico da classe a qual está herdando (Superclasse).
+
+### Estendendo uma classe
+Este é o padrão de relação de herança entre classes do Java.
+
+```java
+// a palavra extends faz esse relacionamento
+public class SavingsAccount extends Account {
+    private double rate;
+
+    public double getRate() {
+        return rate;
+    }
+
+    public void setRate(double rate) {
+        this.rate = rate;
+    }
+}
+```
+Literalmente a palavra reservada `extends` informa que a sublasse `SavingsAccount` herda atributos e métodos da superclasse
+`Account`.
+
+```java
+public class App1 {
+    public static void main(String[] args) {
+        Account a1 = new Account();
+        a1.setNumber("1234");
+        a1.setOwner("João");
+        a1.setBalance(1000);
+        a1.print();
+
+        SavingsAccount a2 = new SavingsAccount();
+        //aqui ao instanciar a subclasse ela faz uso dos métodos da superclasse
+        a2.setNumber("4331");
+        a2.setOwner("Pedro");
+        a2.setBalance(500);
+        a2.print();
+    }
+}
+```
+### Sobrescrevendo metodos da superclasse
+
+Subclasses podem receber atributos e métodos da superclasse, mas pode modificá-los para o seu uso.
+Quando isso acontece o java usa a _annotation_ `@Override` para sobrescrever um método. também quando tratamos dos atributos,
+para que sejam visíveis usamos o modificador de acesso `protected`.
+Ao subscrever um método de uma superclasse este pode ser totalmente modificado ou modificar apenas alguma parte desejada.
+
+Para visualizar como é definido uma _Annotation_ veja a linha 15 do arquivo `SavingsAccount.java`.
+
+Para visualizar a sobrescrita de métodos veja as linhas 16 a 18 do arquivo `SavingsAccount.java`.
+
+Para verificar o uso do protected veja a linha 6 do arquivo `Account.java`.
+
+### chamando o método da superclasse na sobrescrita
+Modo de como chamar o método da superclasse na sobrescrita e usar todo ou parte dele. Isso aconntece quando se faz uso 
+da palavra reservada `super`.
+
+```java
+import br.com.javainsider.partedois.account.Account;
+
+public class SavingsAccount extends Account {
+    public void print() {
+        super.print();
+        System.out.println("Rate" + rate);
+    }
+}
+```
+No exemplo acima estou fazendo uso da lógica usada na superclasse `print`, mas estou adicionando 
+a exibição do valor do atributo `rate` da subclasse.
+
+### annotation @Override
+Annnotation Override quando explicitada evita que se cometa erros de código durante o desenvolvimento.
+A sobrescrita só funciona se a assinatura for a mesma, se num método da superclasse for de um tipo e na sobrescrita
+colocar outro tipo o Java não identifica como o mesmo método e a sobrescrita não funciona, portanto o `@Override` 
+aponta esse erro.
+
+### Construtores e Herança
+No java quando não definimos construtores ele os cria automaticamente, então a ordem é os construtores da subclasse chama
+os construtores da superclasse e assim procede para que seja realizada a execução.
+
+Basicamente mesmo não definindo ou definindo o construtor básico ficaria assim:
+
+```java
+public class ExampleConstruct {
+    private String text1;
+    
+    //construtor básico exibido de forma explicita
+    public ExampleConstruct() {
+        super();
+    }
+}
+```
+O uso do super é opcional, mas quando declarado assim como o `this()` em um construtor que faz referência a outro
+deve ser o primeiro item dentro da chave, senão apresenta erro.
+
+Se o construtor tiver parâmetros de incialização é necessário criar um genérico e definir o `super()` para que
+receba este parâmetro e o atribua na superclasse.
+
+### Modificador protected
+- private: somente os integrantes da classe enxergam
+- default: visivel apenas dentro do pacote em que está inserido
+- protected: visivel no mesmo pacote, visivel na herança pelas subclasses no mesmo ou em outros pacotes
+- public: visível por todos na aplicação
+
+O java não tem nenhum modificador que deixa exclusivo a visualização de um atributo somente na herança.
+
+### Herdando a classe Object
+Ao adicionar complexidade no código não é necessário usar `extends` ou `super` para fazer uso dela.
+
+Todas as classes herdam de Object, portanto elas tem acesso a todos os métodos que a compõe.
+
 
 ## Exercícios
 ### Inseridos no pacote parteum
