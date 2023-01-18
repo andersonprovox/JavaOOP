@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc15d48a-02e0-40f9-9afc-bff2e0ec67d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/account/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/account/SavingsAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/app/App1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/EarthPet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/ExPet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/Fish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/Pet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/WaterPet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/AppPets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/EarthPets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/Fish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/Pets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/WaterPets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -49,10 +60,16 @@
       <recent name="$PROJECT_DIR$/br.com.javainsider" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ExNumber">
-    <configuration name="ExFraction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.javainsider.parteum.ExFraction" />
+  <component name="RunManager" selected="Application.ExPet">
+    <configuration name="AppPets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.javainsider.partedois.Pets.AppPets" />
       <module name="JavaOO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.javainsider.partedois.Pets.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -71,6 +88,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExPet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.javainsider.partedois.Pet.ExPet" />
+      <module name="JavaOO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.javainsider.partedois.Pet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExRetangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.javainsider.parteum.ExRetangle" />
       <module name="JavaOO" />
@@ -78,20 +108,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExWatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.javainsider.parteum.ExWatch" />
-      <module name="JavaOO" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ExPet" />
+        <item itemvalue="Application.AppPets" />
         <item itemvalue="Application.ExNumber" />
         <item itemvalue="Application.ExRetangle" />
         <item itemvalue="Application.ExLamp" />
-        <item itemvalue="Application.ExWatch" />
-        <item itemvalue="Application.ExFraction" />
       </list>
     </recent_temporary>
   </component>

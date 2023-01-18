@@ -522,10 +522,35 @@ receba este parâmetro e o atribua na superclasse.
 
 O java não tem nenhum modificador que deixa exclusivo a visualização de um atributo somente na herança.
 
+O modificador em questão é visível na:?
+
+|Modifier|class|Package|Subclass|World|
+|--------|-----|-------|--------|------|
+| Public| Y|Y|Y|Y|
+|Protected|Y|Y|Y|N|
+|Default|Y|Y|N|N|
+|Private|Y|N|N|N|
+
+
 ### Herdando a classe Object
 Ao adicionar complexidade no código não é necessário usar `extends` ou `super` para fazer uso dela.
 
 Todas as classes herdam de Object, portanto elas tem acesso a todos os métodos que a compõe.
+
+### Influência do modificador final na herança
+Pode ser usado em classes e métodos.
+
+Quando uma classe recebe final indicamos que ela não pode ser herdada.
+
+Quando usado em métodos o final indica que o método não pode ser sobrescrito.
+
+```java
+public final class ExampleFinal {
+    public final void showExample() {
+        System.out.println("Eu não posso ser sobrescrito");
+    }
+}
+```
 
 
 ## Exercícios
