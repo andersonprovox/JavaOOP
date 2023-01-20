@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc15d48a-02e0-40f9-9afc-bff2e0ec67d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/EarthPet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/ExPet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/Fish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pet/WaterPet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/AppPets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/EarthPets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/Fish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/Pets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/Pets/WaterPets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/walk/Ant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/walk/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/walk/Walkable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -30,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>

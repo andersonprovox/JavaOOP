@@ -551,6 +551,15 @@ public final class ExampleFinal {
     }
 }
 ```
+## Interfaces
+Como se fosse um tipo de contrato ou regras que definem a forma como interage com o objeto. Esconde detalhes de funcionamento.
+
+Esconde detalhes de implementação, obriga a obeder detalhes determinados na interface, como se fosse um contrato.
+
+### Criando uma interface
+Depois do Java 8 é possível ter métodos nela, mas o comum é implementar o comportamento e não os detalhes.
+
+
 
 
 ## Exercícios
@@ -561,7 +570,7 @@ public final class ExampleFinal {
 - ExRectangle : Reactangle.java
 - br.com.javainsider.parteum.ExNumber.java : br.com.javainsider.parteum.Number.java
 ### Inseridos no pacote partedois
-
+- br.com.javainsider.partedois.Pets
 
 ## Referências
 [¹²³] Head First C - Altabooks - Cap. 6 Pág. 278 - David & Dawn Griffiths
