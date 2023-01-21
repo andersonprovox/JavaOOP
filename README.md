@@ -559,8 +559,45 @@ Esconde detalhes de implementação, obriga a obeder detalhes determinados na in
 ### Criando uma interface
 Depois do Java 8 é possível ter métodos nela, mas o comum é implementar o comportamento e não os detalhes.
 
+### Importação de interfaces
 
+Pode importar quantas forem necessárias para a classe.
 
+### Visibilidade me métodos definidos por uma interface
+
+Por padrão a interface tem seus métodos como `public` e `abstract` então não é necessário atribuir esses modificadores,
+Uma vez que está fazendo uso de um método vindo da interface não é possível restringir o método na classe, ele obrigatoriamente
+será public.
+
+Não se usa modificações de acesso em métodos da interface.
+
+### Definindo atributos em interfaces
+Não faz sentido atribuir atributos na interface.
+
+A Interface deve implementar o comportamento e este vem dos métodos.
+
+mas tem as suas exceções.
+
+Se um atributo for criado em uma interface ele será `public` e `static`. Os atributos criados na interface não tem relação
+com o que foi definido no objeto.
+
+O atributo na interface assume uma postura `final` isso faz com que não seja alterado durante o processo de execução.
+O comportamento de uma constante.
+
+A interface é abstrata portanto não pode ser instanciada.
+
+### Métodos default em interfaces
+
+A partir da versão 8 permite a implementação de métodos dentro da interface. Isso evita que quando uma interface é alterada
+haja a quebra do código já criado.
+
+```java
+public interface StringManipulator {
+    default String upper(String s) {
+        return s.toUpperCase();
+    }
+        }
+```
 
 ## Exercícios
 ### Inseridos no pacote parteum
