@@ -598,6 +598,69 @@ public interface StringManipulator {
     }
         }
 ```
+### Diamond problem
+
+O Java por não permitir Herança Múltipla não tinha problema com o diamond problem.
+**Diamond Problem:** quando a subclasse herda de duas classes que possuem métodos com o mesmo nome.
+
+Quando a partir do Java 8 foi permitido criar métodos nas interfaces o diamond problem apareceu, porque é possível implementar
+mais de uma interface numa classe.
+Para resolver essa questão, ao chamar o método que está em uma interface devemos usar a da seguinte maneira:
+```java
+public class StringManipulatorImpl implements Interface1, Interface2 {
+    
+    @Override
+    public String upper(String s) {
+        return Interface1.super.upper(s);
+    }
+}
+```
+Veja no exemplo acima que damos o nome da interface da qual queremos o método atribuímos a palavra reservada `super` para 
+indicar que vamos usar o método da interface declarada e depois do ponto passamos o nome do método e os argumentos para seu uso.
+
+### Métodos private e static em interfaces
+Para fazer uso de métodos de uma interface devemos declarar os mesmos usando os modificadores de acesso `private` `static`.
+
+O private vai funcionar para métodos que devem ser executados dentro da interface e não serão acessíveis fora dela.
+
+O static pode ser definido quando vai se fazer o uso do método direto na interface e não a sua instância do modo como foi
+concebido na sua origem.
+
+Lembrando que o Java permite criar métodos em interfaces com os modificadores de acesso `private`, `default` e `static`.
+
+## Classes abstratas
+
+Há momentos em que temos classes das quais são definidas para darem uma semântica ao código, mas não tem sentido 
+fazer a sua instância diretamente, sendo que ficara para as suas subclasses essa tarefa.
+
+Para este caso fazemos o uso de classes abstratas,, assim evita=se que uma classe que não faz sentido instanciar, seja de fato
+instanciada.
+
+```java
+public abstract class AbstractClassExample {
+    
+}
+```
+### métodos abstratos
+Uma classe abstrata pode ter _métodos abstratos_ estes métodos passam a obrigatoriedade da implementação do método para
+as classes concretas que estão como subclasses da classe abstrata, entretanto, se a classe abstrata tiver métodos, mas não
+tem subclasses, então a definição do método nela se faz obrigatório.
+
+> Todo método abstrato precisa pertencer a uma classe abstrata, mas uma classe abstrata não precisa obrigatóriamente ter
+> métodos abstratos.
+
+Por mais que se tenha uma cadeia de superclasse e suas subclasses e venha ter uma sequencia de classes abstratas e depois 
+na sequência houver uma classe concreta, a classe concreta vai ter que implementar o método.
+
+```java
+public abstract class AbstractClassExample {
+    // o comportamento dese método será definido na subclasse que fizer uso dessa superclasse.
+   public abstract void methodAbstractExample() {
+       
+   } 
+}
+```
+
 
 ## Exercícios
 ### Inseridos no pacote parteum
