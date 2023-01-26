@@ -661,6 +661,122 @@ public abstract class AbstractClassExample {
 }
 ```
 
+## Polimorfismo
+Ato de uma mesma classe obter diferentes comportamentos em diferentes situações.
+
+O polimorfismo pode ser em tempo de execução ou em tempo de compilação.
+
+Pode haver o Method Overloading: que é quando um método com o mesmo nome pode ter e receber prâmetros diferentes resultando 
+em respostas diferentes.
+
+Como ter o Method Overriding: que é quando as subclasses sobrescrevem o método da superclasse.
+
+**Method Overriding** está associado ao polimorfismo de tempo de execução(**Runtime polymorphism**).
+```java
+// Java Program for Method Overriding
+
+// Class 1
+// Helper class
+class Parent {
+
+	// Method of parent class
+	void Print()
+	{
+
+		// Print statement
+		System.out.println("parent class");
+	}
+}
+
+// Class 2
+// Helper class
+class subclass1 extends Parent {
+
+	// Method
+	void Print() { System.out.println("subclass1"); }
+}
+
+// Class 3
+// Helper class
+class subclass2 extends Parent {
+
+	// Method
+	void Print()
+	{
+
+		// Print statement
+		System.out.println("subclass2");
+	}
+}
+
+// Class 4
+// Main class
+class GFG {
+
+	// Main driver method
+	public static void main(String[] args)
+	{
+
+		// Creating object of class 1
+		Parent a;
+
+		// Now we will be calling print methods
+		// inside main() method
+
+		a = new subclass1();
+		a.Print();
+
+		a = new subclass2();
+		a.Print();
+	}
+}
+
+```
+**Method Overloading** está associado ao polimorfismo de tempo de compilação(**Compile-time polymorphism**).
+```java
+// Java Program for Method overloading
+// By using Different Types of Arguments
+
+// Class 1
+// Helper class
+class Helper {
+
+	// Method with 2 integer parameters
+	static int Multiply(int a, int b)
+	{
+
+		// Returns product of integer numbers
+		return a * b;
+	}
+
+	// Method 2
+	// With same name but with 2 double parameters
+	static double Multiply(double a, double b)
+	{
+
+		// Returns product of double numbers
+		return a * b;
+	}
+}
+
+// Class 2
+// Main class
+class GFG {
+
+	// Main driver method
+	public static void main(String[] args)
+	{
+
+		// Calling method by passing
+		// input as in arguments
+		System.out.println(Helper.Multiply(2, 4));
+		System.out.println(Helper.Multiply(5.5, 6.3));
+	}
+}
+
+```
+OBS: conceito fortemente atrelado ou até mesmo dependente do conceito de herança.
+
 
 ## Exercícios
 ### Inseridos no pacote parteum
@@ -673,4 +789,5 @@ public abstract class AbstractClassExample {
 - br.com.javainsider.partedois.Pets
 
 ## Referências
-[¹²³] Head First C - Altabooks - Cap. 6 Pág. 278 - David & Dawn Griffiths
+- [¹²³] Head First C - Altabooks - Cap. 6 Pág. 278 - David & Dawn Griffiths
+- Exemplos de polimorfismo retirados do link: [Geeks for Geeks](https://www.geeksforgeeks.org/polymorphism-in-java/?ref=lbp)
