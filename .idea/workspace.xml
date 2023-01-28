@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc15d48a-02e0-40f9-9afc-bff2e0ec67d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/generator/AppGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/generator/Generator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/generator/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/generator/RandomGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/generator/SequenceGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/exfigure/AppFigure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/exfigure/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/exfigure/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/exfigure/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/exfigure/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/exfigure/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/record/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/record/PersonRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/sealed/Bus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/sealed/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/sealed/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>

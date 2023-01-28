@@ -835,8 +835,61 @@ public class App9 {
 }
 ```
 
+### Definindo Sealed Classes
+Por padrão o Java mantém as suas classes extensíveis.
+Podemos restringir quais classes podem implementar uma interface ou podem extender uma classe, com o marcador `sealed`,
+então em seguida deve declarar quais as classes que podem ter acesso por herança da classe selada em questão com o marcador
+`permits`.Ficará como algo do tipo `public abstract sealed class Vehicle permits Car, Bus {...}`.
 
+Então nas classe que foram definidas como permitidas para a herança podemos ou usar o modificar `final` para quando não queremos
+que a superclasse e subclasses sejam herdadas ou definimos com o modificador `non-sealed` para uma subclasse que queremos
+fazer extensão dela dentro da aplicação. Exemplo: `public non-sealed class Car extends Vehicle {...}`.
 
+Para ver um exemplo veja o pacote **br.com.javainsider.partedois.sealed**.
+
+## Java Records
+
+### Criando uma classe para representar dados
+
+Criado para facilitar a criação de clases em que seus atributos não se alteram após a criação do objeto e a passagem de 
+argumentos nele, métodos imutáveis.
+
+Modo de declarar uma record:
+`public record PersonRecord(String firstName, String lastName, int age){...}`
+
+Veja o pacote **br.com.javainsider.partedois.record**, para verificar o modo de criar atributos imutáveis sem record e 
+com record.
+
+O comportamento e métodos para trabalhar com a classe imutável é o mesmo no momento de instanciar seja com o sem record.
+
+### Criando diferentes construtores para o record
+
+Pode criar construtores próprios para o record, mas deve sempre fazer referencia para o construtor padrão.
+```java
+import java.util.Objects;
+
+//Usando o recurso de record no Java
+//Este é o construtor padrão
+public record PersonRecord(String firstName, String lastName, int age) {
+    // Construtor para validar que não vai passar nulo
+    public PersonRecord {
+        Objects.requireNonNull(firstName);
+        Objects.requireNonNull(lastName);
+        
+    }
+    /*
+    * Construtor personalizado sem definir age
+    * Mesmo criando o meu construtor tive que definir uma referância ao construtor padrão com o this()
+    * é obrigatório passar todos os parâmetros do construtor
+    * */
+    public PersonRecord (String firstName, String lastName) {
+        this(firstName, lastName, 0);
+    }
+}
+```
+### Definindo outros elementos de um record
+
+Atributos estáticos, 
 ## Exercícios
 ### Inseridos no pacote parteum
 - Exfraction.java : br.com.javainsider.parteum.Fraction.java
@@ -846,6 +899,8 @@ public class App9 {
 - br.com.javainsider.parteum.ExNumber.java : br.com.javainsider.parteum.Number.java
 ### Inseridos no pacote partedois
 - br.com.javainsider.partedois.Pets
+- br.com.javainsider.partedois.exaccount
+- br.com.javainsider.partedois.exfigure
 
 ## Referências
 - [¹²³] Head First C - Altabooks - Cap. 6 Pág. 278 - David & Dawn Griffiths
