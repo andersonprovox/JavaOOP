@@ -777,6 +777,65 @@ class GFG {
 ```
 OBS: conceito fortemente atrelado ou até mesmo dependente do conceito de herança.
 
+### Casting explicito e instanceof
+
+O Casting explícito assim como com tipos primitivos deve ser usado com cautela, pois tem o mesmo propósito de dizer ao
+compilador que o desenvolvedor sabe o que está fazendo.
+
+Por exemplo, podemos usar casting explícito com classes quando queremos fazer uso de métodos em uma subclasse que não 
+estão definidos na super classe, caso faça uma instância como `Pet p = new Dog()`, entenda que `Pet` é a superclasse e
+`Dog` é a subclasse, nesse caso `p` terá acesso ao métodos definidos em Pet e não vai fazer uso do que está em Dog. Caso
+seja necessário fazer uso de algum método exclusivo de Dog, então pode atribuir um Casting Explícito `Dog d = (Dog) p`.
+
+Isso até pode resolver, mas pode trazer um problema, caso queira fazer um Casting para outra subclasse que faz o uso da
+superclasse já instanciada o compilador vai apresentar o erro **ClassCastException**, pois na memória HEAP já foi criada 
+uma instância vinculando aquela superclasse com uma outra subclasse, portanto o uso de `instanceof` pode ajudar a evitar 
+erros: `if(p instanceof Dog){...}`, Caso seja afirmativo que p instanciou o objeto Dog então o casting será realizado.
+Veja mais no exemplo Abaixo:
+```java
+public class App9 {
+    public static void main(String[] args) {
+        Pet p = new Dog();
+        p.feed();
+        
+        //Fish f = (Fish) p;
+        //f.feed();
+        
+        if(p instanceof Dog) {
+            Dog d = (Dog) p;
+            d.sit();
+        } else {
+            System.out.println("O tipo não é um Dog");
+        }
+    }
+}
+```
+Veja que no exemplo acima se a linha que faz o Casting Explícito para Fish estivesse descomentada o else do if com `instanceof`
+seria executado pois já há um casting para uma classe que não é Dog.
+
+### Casting automático com o operador instanceof
+
+Uma nova função introduzida a partir do Java 16 é o Casting automático na função, segue o exemplo:
+```java
+public class App9 {
+    public static void main(String[] args) {
+        Pet p = new Dog();
+        p.feed();
+        
+        //Fish f = (Fish) p;
+        //f.feed();
+        
+        //casting automático
+        if(p instanceof Dog d) {
+            d.sit();
+        } else {
+            System.out.println("O tipo não é um Dog");
+        }
+    }
+}
+```
+
+
 
 ## Exercícios
 ### Inseridos no pacote parteum
