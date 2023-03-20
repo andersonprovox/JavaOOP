@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc15d48a-02e0-40f9-9afc-bff2e0ec67d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/exfigure/AppFigure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/exfigure/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/exfigure/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/exfigure/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/exfigure/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/exfigure/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/record/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/record/PersonRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/sealed/Bus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/sealed/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/javainsider/partedois/sealed/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +32,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/anderson/Projetos/project-movie-api/movies"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/br/com/javainsider" />
