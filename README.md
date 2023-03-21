@@ -18,13 +18,11 @@ a grosso modo pode considerar:
 **Atributos:** é o que caracteriza o objeto, se fosse um objeto pessoa seria seu nome,
 idade, etc.
 
-**métodos:** são as ações que esse objeto executa dentro do contexto no qual foi inserido,
-se for uma pessoa seria, andar, correr, comer, etc.
+**métodos:** são as ações que esse objeto executa dentro do contexto no qual foi inserido, se for uma pessoa seria, andar, correr, comer, etc.
 
 ### Criando uma classe com atributos
 
-**Classe** é a base da orientação a objetos. A estrutura para criar objetos. A classe só define o tipo de atributos
-que o objeto vai ter, quem vai armazenar informações específicas são os objetos quando instanciados.
+**Classe** é a base da orientação a objetos. A estrutura para criar objetos. A classe só define o tipo de atributos que o objeto vai ter, quem vai armazenar informações específicas são os objetos quando instanciados.
 
 **Atributo** é o que a classe é capaz de armazenar de forma simplória, é uma variável.
 
@@ -40,8 +38,7 @@ Criar um objeto ou instanciar uma classe, são termos sinônimos.
 - **Heap**: Local de memória no qual se concentra as classes definidas da aplicação
 - Quando um objeto é instanciado ele acaba sendo definido na memória Stack e faz referência à classe pertencente à memória HEAP
 
-Garbage Collector é um item da JVM, não tem como controlá-lo a JVM assume o papel de remover as referências do HEAP 
-que não são mais acessíveis.
+Garbage Collector é um item da JVM, não tem como controlá-lo a JVM assume o papel de remover as referências do HEAP que não são mais acessíveis.
 
 A Memória Stack se limpa sozinha no final da execução do método.
 
@@ -81,8 +78,8 @@ public class Account {
 
 **OBS:**
 
-- Quando criamos o método na classe e colocamos variáveis entre parênteses isso se chama _parâmetro_
-- Quando depois de instanciar um objeto vamos passar um valor conforme um parâmetro já estabelecido na classe isso se chama _argumento_
+- Quando criamos o método na classe e colocamos variáveis entre parênteses isso se chama _parâmetro._
+- Quando depois de instanciar um objeto vamos passar um valor conforme um parâmetro já estabelecido na classe isso se chama _argumento._
 
 Fazendo uso dos atributos e métodos da classe após instanciar o objeto:
 
@@ -140,8 +137,7 @@ public class Account {
 }
 ```
 
-Cuidado para não chamar o mesmo método dentro dele mesmo, pois assim vai criar o erro `StackOverFlowError`
-que é um erro que aparece quando algo entra em loop infinito.
+Cuidado para não chamar o mesmo método dentro dele mesmo, pois assim vai criar o erro `StackOverFlowError`que é um erro que aparece quando algo entra em loop infinito.
 
 ```java
 public class Account {
@@ -668,7 +664,7 @@ public abstract class AbstractClassExample {
 
 ### Métodos abstratos
 
-Uma classe abstrata pode ter _métodos abstratos_ estes métodos passam a obrigatoriedade da implementação do método para as classes concretas que estão como subclasses da classe abstrata, entretanto, se a classe abstrata tiver métodos, mas não tem subclasses, então a definição do método nela se faz obrigatório.
+Uma classe abstrata pode ter _métodos abstratos_, estes métodos passam a obrigatoriedade da implementação do método para as classes concretas que estão como subclasses da classe abstrata, entretanto, se a classe abstrata tiver métodos, mas não tem subclasses, então a definição do método nela se faz obrigatório.
 
 > Todo método abstrato precisa pertencer a uma classe abstrata, mas uma classe abstrata não precisa obrigatóriamente ter métodos abstratos.
 
@@ -689,9 +685,9 @@ Ato de uma mesma classe obter diferentes comportamentos em diferentes situaçõe
 
 O polimorfismo pode ser em tempo de execução ou em tempo de compilação.
 
-Pode haver o Method Overloading: que é quando um método com o mesmo nome pode ter e receber prâmetros diferentes resultando em respostas diferentes.
+Pode haver o **Method Overloading:** que é quando um método com o mesmo nome pode ter e receber prâmetros diferentes resultando em respostas diferentes.
 
-Como ter o Method Overriding: que é quando as subclasses sobrescrevem o método da superclasse.
+Como ter o **Method Overriding**: que é quando as subclasses sobrescrevem o método da superclasse.
 
 **Method Overriding** está associado ao polimorfismo de tempo de execução(**Runtime polymorphism**).
 
@@ -868,14 +864,14 @@ Para ver um exemplo veja o pacote **br.com.javainsider.partedois.sealed**.
 
 ### Criando uma classe para representar dados
 
-Criado para facilitar a criação de clases em que seus atributos não se alteram após a criação do objeto e a passagem de argumentos nele, métodos imutáveis.
+Criado para facilitar a criação de classes em que seus atributos não se alteram após a criação do objeto e a passagem de argumentos nele, métodos imutáveis.
 
 Modo de declarar uma record:
 `public record PersonRecord(String firstName, String lastName, int age){...}`
 
 Veja o pacote **br.com.javainsider.partedois.record**, para verificar o modo de criar atributos imutáveis sem record e com record.
 
-O comportamento e métodos para trabalhar com a classe imutável é o mesmo no momento de instanciar seja com o sem record.
+O comportamento e métodos para trabalhar com a classe imutável é o mesmo no momento de instanciar seja com ou sem record.
 
 ### Criando diferentes construtores para o record
 
