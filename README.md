@@ -23,16 +23,16 @@ se for uma pessoa seria, andar, correr, comer, etc.
 
 ### Criando uma classe com atributos
 
-Classe é a base da orientação a objetos. A estrutura para criar objetos. A classe só define o tipo de atributos
+**Classe** é a base da orientação a objetos. A estrutura para criar objetos. A classe só define o tipo de atributos
 que o objeto vai ter, quem vai armazenar informações específicas são os objetos quando instanciados.
 
-Atributo é o que a classe é capaz de armazenar de forma simplória é uma variável.
+**Atributo** é o que a classe é capaz de armazenar de forma simplória, é uma variável.
 
-Instância é o ato de criar um objeto. Cada objeto na memória é único, por mais que façam uso da mesma classe.
+**Instância** é o ato de criar um objeto. Cada objeto na memória é único, por mais que façam uso da mesma classe.
 
-Criar um objeto ou intanciar uma classe, são termos sinônimos.
+Criar um objeto ou instanciar uma classe, são termos sinônimos.
 
-Objetos são elementos criados no tempo de execução, a classe define a estrutura dos objetos.
+**Objetos** são elementos criados no tempo de execução, a classe define a estrutura dos objetos.
 
 ### Stack e Heap: como objetos são guardados na memória
 
@@ -47,16 +47,12 @@ A Memória Stack se limpa sozinha no final da execução do método.
 
 Ainda mencionando sobre memória Stack e Heap, segue a definição no livro Head First C:
 
-> **Heap** é a seção de memória onde o programa armazena dados que devem estar disponíveis por um tempo maior. É uma solução
-> pois é difícil conseguir espaços maiores na _Stack_ em tempo de execução,
-> podemos considerar que o armazenamento é dinâmico. [¹]
+> **Heap** é a seção de memória onde o programa armazena dados que devem estar disponíveis por um tempo maior. É uma solução. pois é difícil conseguir espaços maiores na _Stack_ em tempo de execução, podemos considerar que o armazenamento é dinâmico. [¹]
 
 > **Stack** é a seção da memória para variáveis locais e cada variável desaparece
 > assim que sair da função, o armazenamento é estático.[²]
 
-> No C quando se está manipulando memória é necessário fazer uso de funções que gerenciam o espaço
-> alocado na Heap, pois caso contrário pode acontecer vazamento de memória, nesse ponto
-> que o **Garbage Collector** do Java faz diferença, pois a JVM vai atuar automaticamente para que isso não aconteça.[³]
+> No C quando se está manipulando memória é necessário fazer uso de funções que gerenciam o espaço alocado na Heap, pois caso contrário pode acontecer vazamento de memória, nesse ponto que o **Garbage Collector** do Java faz diferença, pois a JVM vai atuar automaticamente para que isso não aconteça.[³]
 
 ## Por dentro dos métodos
 
@@ -116,18 +112,15 @@ public class App {
 
 ### Passagem de parâmetros
 
-Quando se passa um objeto como parâmetro, o que é passado é a sua referência. As alterações nesses parâmetros 
-refletem fora do método.
+Quando se passa um objeto como parâmetro, o que é passado é a sua referência. As alterações nesses parâmetros refletem fora do método.
 
-Parâmetros sempre passam uma cópia do valor não uma referência ao valor. Quando passado um parâmetro do tipo primitivo
-as alterações nele não refletem fora.
+Parâmetros sempre passam uma cópia do valor não uma referência ao valor. Quando passado um parâmetro do tipo primitivo as alterações nele não refletem fora.
 
 ### Sobrecarga de métodos
 
-Sobre carga é definir métodos diferentes com o mesmo nome. Se conportam de forma diferente.
+Sobre carga é definir métodos diferentes com o mesmo nome. Se comportam de forma diferente.
 
-Somente é possível fazer a sobrecarga de um método quando se altera o tipo do parâmetro ou se insere mais parâmetros
-para a sobre carga.
+Somente é possível fazer a sobrecarga de um método quando se altera o tipo do parâmetro ou se insere mais parâmetros para a sobre carga.
 
 Não é possível fazer sobrecarga de métodos usando o mesmo nome mas alterando o seu tipo de retorno.
 
@@ -161,24 +154,21 @@ public class Account {
 
 ### Inicializando atributos em objetos
 
-Atributos quando não definido um valor, ele assume um, isso não acontece com tipos primitivos criados no Java isso acontece
-somente nos atributos de uma classe.
+Atributos quando não definido um valor, ele assume um, isso não acontece com tipos primitivos criados no Java, isso acontece somente nos atributos de uma classe.
 
-a memória HEAP funciona por referência, por isso define valores por padrão como zero em tipos numéricos e atribui `null`
-a tipos de objetos.
+A memória HEAP funciona por referência, por isso define valores por padrão como zero em tipos numéricos e atribui `null`a tipos de objetos.
 
-uma variável de tripo primitivo definida ela é criada dentro da memória Stack por isso não pode ser criada sem um valor inicial,
-O que é criado no HEAP não é afetado por essa regra.
+Uma variável de tripo primitivo definida ela é criada dentro da memória Stack por isso não pode ser criada sem um valor inicial, O que é criado no HEAP não é afetado por essa regra.
 
-Os atributos de uma classe quando não definidos de uma valor, o Java atribui esse valor automaticamente:
+Os atributos de uma classe quando não definidos de um valor, o Java atribui esse valor automaticamente:
 
 - 0 para numéricos
 - null para texto
 - false para booleano
 
-Quando criada uma variável local dentro de um método, então esta deve ser incializada explicitamente.
+Quando criada uma variável local dentro de um método, então esta deve ser inicializada explicitamente.
 
-### Entendendo ua NullPointerException
+### Entendendo uma NullPointerException
 
 Traduzindo seria erro de referências nulas.
 O Java possui um conjunto de exceções para erros que acontecem no código.
@@ -198,7 +188,7 @@ public class NullReference {
 
 ## Construindo e encapsulando objetos
 
-### criando uma classe com visibilidade public
+### Criando uma classe com visibilidade public
 
 Se houver uma classe pública dentro de um arquivo Java então a classe e o arquivo devem ter o mesmo nome.
 
@@ -240,11 +230,11 @@ public class EncapsulatedAccount {
 ### Definindo construtores da classe
 
 - Construtor é uma especie de método para construir coisas e executar algo durante o tempo de execução de uma aplicação.
-- Toda classe em JAva tem um construtor, se vc não criar o Java cria um automaticamente.
+- Toda classe em Java tem um construtor, se vc não criar o Java cria um automaticamente.
 - Tem cara de método, mas não tem nenhum tipo de retorno.
 - Obrigatório ter o mesmo nome da classe.
 - Pode passar informações como passa para os métodos
-- Também suportam sobrecarga
+- Também suporta sobrecarga
 
 Exemplo de construtor: 
 
@@ -262,32 +252,27 @@ Sempre ativado quando chamado `var account1 = new br.com.javainsider.parteum.Acc
 
 Isso é útil quando queremos inicializar um objeto de várias formas diferentes.
 
-Para evitar repetir código durante essas chamadas com esses construtores o que podemos fazer é criar um construtor
-genérico com todos os atributos sendo chamados nele e com os demais construtores fazer referência ao construtor genérico.
+Para evitar repetir código durante essas chamadas com esses construtores o que podemos fazer é criar um construtor genérico com todos os atributos sendo chamados nele e com os demais construtores fazer referência ao construtor genérico.
 
-Para isso fazemos o uso do `this()`, assim fazemos referência ao construtor genérico. o arquivo `br.com.javainsider.parteum.EncapsulatedAccount.java`,
-entre as linhas 8 a 24, tem o exemplo do uso de sobre carga de construtor e reuso dos atributos no construtor genérico
-pelos construtores mais específicos.
+Para isso fazemos o uso do `this()`, assim fazemos referência ao construtor genérico. O arquivo `br.com.javainsider.parteum.EncapsulatedAccount.java`, entre as linhas 8 a 24, tem o exemplo do uso de sobre carga de construtor e reuso dos atributos no construtor genérico pelos construtores mais específicos.
 
 Neste caso `this()` deve ser a primeira coisa a vir depois da criação do construtor, senão dará erro.
 
 ### Modificador final em atributos
 
-É um modificador de nome final usado em atributos que não terão seus valores reatribuídos durante o tempo de execução
-da aplicação, comportamento semelhante a de uma constante.
+É um modificador de nome final usado em atributos que não terão seus valores reatribuídos durante o tempo de execução da aplicação, comportamento semelhante a de uma constante.
 
-Quando o usado o final é obrigatório a passar de um valor para o atributo. isso pode ser atribuido no construtor.
+Quando o usado o final é obrigatório a passar um valor para o atributo. isso pode ser atribuido no construtor.
 
 Com final é bloqueada a atribuição que altera a referência.
 Não consegue alterar a variável, mas o objeto ao qual ela aponta isso pode ser feito o final não blolqueia essa alteração.
 
 ### Definindo atributos estáticos
 
-Static é vinculado à classe e não na instância. então os objetos vão compartilhar um mesmo atributo da classe.
+**Static** é vinculado à classe e não na instância. então os objetos vão compartilhar um mesmo atributo da classe.
 `private static int ccurrentId = 1`, usando a palavra reservada.
 
-Portanto quando um construtor chamar e fizer alguma alteração quando instanciado o objeto, então o currentId será alterado,
-essa alteração continuará valendo para o próximo objeto que for instanciado.
+Portanto quando um construtor chamar e fizer alguma alteração quando instanciado o objeto, então o *currentId* será alterado, essa alteração continuará valendo para o próximo objeto que for instanciado.
 
 ### Definindo métodos estáticos
 
@@ -310,10 +295,9 @@ public class Example {
 
 ### Usando bloco static para inicializar atributos estáticos
 
-Construtores não se aplicam com static.
+Construtores não se aplicam com **static**.
 
-Static block fica dentro da classe vem depois dos atributos e antes dos métodos. Tudo dentro desse bloco tem que
-ter os itens estáticos da classe.
+Static block fica dentro da classe vem depois dos atributos e antes dos métodos. Tudo dentro desse bloco tem que ter os itens estáticos da classe.
 
 Este bloco é executado apenas uma vez, então é garantido que ele vai ser executado dentro da aplicação.
 
@@ -329,8 +313,7 @@ public class Example {
 
 ### Exemplos de elementos estáticos na API do JAVA
 
-O famoso método main é static. Ele é definido assim pois a JVM vai procurar qual o método para ser executado para a inicialização
-da aplicação, portanto com este static esse método pode ser executado sem instância.
+O famoso método main é static. Ele é definido assim pois a JVM vai procurar qual o método para ser executado para a inicialização da aplicação, portanto com este static esse método pode ser executado sem instância.
 
 O out do System também é static. Métodos da class Math, também são.
 
@@ -350,9 +333,7 @@ Uma constante até pode usar public, pois conforme não é alterada, então não
 
 ### Controlando a criação de objetos
 
-PAra se obter um ganho de espaço na memória é possível através do construtor criar e instanciar os objetos da classe dentro
-da própria classe, para que não seja instanciado fora dela, o construtor adquire o modificado de acsso private, mais detalhes
-na classe Number2.java na linha 5 deste projeto.
+Para se obter um ganho de espaço na memória é possível através do construtor criar e instanciar os objetos da classe dentro da própria classe, para que não seja instanciado fora dela, o construtor adquire o modificador de acesso private, mais detalhes na classe Number2.java na linha 5 deste projeto.
 
 ## Organizando código-fonte em pacotes
 
@@ -360,7 +341,7 @@ na classe Number2.java na linha 5 deste projeto.
 
 Para organização de arquivos e bibliotecas dentro do projeto.
 
-### Usando p package para definir o pacote de uma classe
+### Usando o package para definir o pacote de uma classe
 
 Deve usar a notação package para informar ao Java a localização da classe que está usando, isso não é feito automaticamente.
 
@@ -371,8 +352,7 @@ package br.com.javainsider;
 ### Importando classes de outro pacote
 
 A instancia de forma simples acontece quando classes estão no mesmo pacote.
-PAra conseguir instanciar um classe de outro pacote deve usar o conceito de _Fully Qualified name_ qie será fazer o import completo
-usando o nome do pacote da classe junto com a classe.
+Para conseguir instanciar um classe de outro pacote deve usar o conceito de _Fully Qualified name_ que será fazer o import completo usando o nome do pacote da classe junto com a classe.
 
 ```java
 package br.com.javainsider.app;
@@ -387,7 +367,7 @@ public class app9 {
 }
 ```
 
-PAra evitar esse uso extensivo podemos usar o import para manter o código legível. O import deve ser usado depois do package
+Para evitar esse uso extensivo podemos usar o import para manter o código legível. O import deve ser usado depois do package
 e antes da definição da classe.
 
 ```java
@@ -420,19 +400,15 @@ public class app9 {
 
 ### Imports automáticos do Java.lang
 
-O pacote java.lang é uma classe especial do Java, portanto não será necessário ao fazer uso de métodos dela importar na
-sua aplicação, os itens dessa classe são muito utilizados, por exemplo, `String` que usamos para criar strings na aplicação.
+O pacote java.lang é uma classe especial do Java, portanto não será necessário ao fazer uso de métodos dela importar na sua aplicação, os itens dessa classe são muito utilizados, por exemplo, `String` que usamos para criar strings na aplicação.
 
-### tratamento de ambiguidade de nome de classes
+### Tratamento de ambiguidade de nome de classes
 
-Quando for importar uma classe com o mesmo nome de pacotes diferentes isso vai dar erro, pode resolver usando o 
-_fully qualified name._ nesse caso pode importar as duas com o FQN ou você pode importar uma usando import e uma outra
-que for usar fazer o uso do FQN.
+Quando for importar uma classe com o mesmo nome de pacotes diferentes isso vai dar erro, pode resolver usando o _fully qualified name._ nesse caso pode importar as duas com o FQN ou você pode importar uma usando import e uma outra que for usar fazer o uso do FQN.
 
 ### Visibilidade usando package
 
-Quando não usamos modificadores de acesso, o Java atribui uma visibilidade default que é chamada de package, isso diz que
-por padrão a classe é visualizada dentro do pacote.
+Quando não usamos modificadores de acesso, o Java atribui uma visibilidade default que é chamada de package, isso diz que por padrão a classe é visualizada dentro do pacote.
 
 Caso seja necessário que elementos da classe sejam visualizados por outro pacote o modificador de acesso deve ser `public`.
 
@@ -510,8 +486,7 @@ public class App1 {
 ### Sobrescrevendo metodos da superclasse
 
 Subclasses podem receber atributos e métodos da superclasse, mas pode modificá-los para o seu uso.
-Quando isso acontece o java usa a _annotation_ `@Override` para sobrescrever um método. também quando tratamos dos atributos,
-para que sejam visíveis usamos o modificador de acesso `protected`.
+Quando isso acontece o java usa a _annotation_ `@Override` para sobrescrever um método. também quando tratamos dos atributos, para que sejam visíveis usamos o modificador de acesso `protected`.
 Ao subscrever um método de uma superclasse este pode ser totalmente modificado ou modificar apenas alguma parte desejada.
 
 Para visualizar como é definido uma _Annotation_ veja a linha 15 do arquivo `SavingsAccount.java`.
@@ -522,8 +497,7 @@ Para verificar o uso do protected veja a linha 6 do arquivo `Account.java`.
 
 ### chamando o método da superclasse na sobrescrita
 
-Modo de como chamar o método da superclasse na sobrescrita e usar todo ou parte dele. Isso aconntece quando se faz uso 
-da palavra reservada `super`.
+Modo de como chamar o método da superclasse na sobrescrita e usar todo ou parte dele. Isso aconntece quando se faz uso da palavra reservada `super`.
 
 ```java
 import br.com.javainsider.partedois.account.Account;
@@ -536,22 +510,18 @@ public class SavingsAccount extends Account {
 }
 ```
 
-No exemplo acima estou fazendo uso da lógica usada na superclasse `print`, mas estou adicionando 
-a exibição do valor do atributo `rate` da subclasse.
+No exemplo acima estou fazendo uso da lógica usada na superclasse `print`, mas estou adicionando  a exibição do valor do atributo `rate` da subclasse.
 
 ### annotation @Override
 
-Annnotation Override quando explicitada evita que se cometa erros de código durante o desenvolvimento.
-A sobrescrita só funciona se a assinatura for a mesma, se num método da superclasse for de um tipo e na sobrescrita
-colocar outro tipo o Java não identifica como o mesmo método e a sobrescrita não funciona, portanto o `@Override` 
-aponta esse erro.
+**Annnotation Override** quando explicitada evita que se cometa erros de código durante o desenvolvimento.
+A sobrescrita só funciona se a assinatura for a mesma, se num método da superclasse for de um tipo e na sobrescrita colocar outro tipo o Java não identifica como o mesmo método e a sobrescrita não funciona, portanto o `@Override` aponta esse erro.
 
 ### Construtores e Herança
 
-No java quando não definimos construtores ele os cria automaticamente, então a ordem é os construtores da subclasse chama
-os construtores da superclasse e assim procede para que seja realizada a execução.
+No java quando não definimos construtores ele os cria automaticamente, então a ordem é os construtores da subclasse chamar os construtores da superclasse e assim procede para que seja realizada a execução.
 
-Basicamente mesmo não definindo ou definindo o construtor básico ficaria assim:
+Basicamente mesmo não definindo ou definindo, o construtor básico ficaria assim:
 
 ```java
 public class ExampleConstruct {
@@ -564,18 +534,16 @@ public class ExampleConstruct {
 }
 ```
 
-O uso do super é opcional, mas quando declarado assim como o `this()` em um construtor que faz referência a outro
-deve ser o primeiro item dentro da chave, senão apresenta erro.
+O uso do super é opcional, mas quando declarado assim como o `this()` em um construtor que faz referência a outro deve ser o primeiro item dentro da chave, senão apresenta erro.
 
-Se o construtor tiver parâmetros de incialização é necessário criar um genérico e definir o `super()` para que
-receba este parâmetro e o atribua na superclasse.
+Se o construtor tiver parâmetros de incialização é necessário criar um genérico e definir o `super()` para que receba este parâmetro e o atribua na superclasse.
 
 ### Modificador protected
 
-- private: somente os integrantes da classe enxergam
-- default: visivel apenas dentro do pacote em que está inserido
-- protected: visivel no mesmo pacote, visivel na herança pelas subclasses no mesmo ou em outros pacotes
-- public: visível por todos na aplicação
+- **private**: somente os integrantes da classe enxergam
+- **default**: visivel apenas dentro do pacote em que está inserido
+- **protected**: visivel no mesmo pacote, visivel na herança pelas subclasses no mesmo ou em outros pacotes
+- **public**: visível por todos na aplicação
 
 O java não tem nenhum modificador que deixa exclusivo a visualização de um atributo somente na herança.
 
@@ -624,11 +592,10 @@ Depois do Java 8 é possível ter métodos nela, mas o comum é implementar o co
 
 Pode importar quantas forem necessárias para a classe.
 
-### Visibilidade me métodos definidos por uma interface
+### Visibilidade de métodos definidos por uma interface
 
-Por padrão a interface tem seus métodos como `public` e `abstract` então não é necessário atribuir esses modificadores,
-Uma vez que está fazendo uso de um método vindo da interface não é possível restringir o método na classe, ele obrigatoriamente
-será public.
+Por padrão a interface tem seus métodos como `public` e `abstract` então não é necessário atribuir esses modificadores.
+Uma vez que está fazendo uso de um método vindo da interface não é possível restringir o método na classe, ele obrigatoriamente será **public**.
 
 Não se usa modificações de acesso em métodos da interface.
 
@@ -636,12 +603,9 @@ Não se usa modificações de acesso em métodos da interface.
 
 Não faz sentido atribuir atributos na interface.
 
-A Interface deve implementar o comportamento e este vem dos métodos.
+A Interface deve implementar o comportamento e este vem dos métodos, mas tem as suas exceções.
 
-mas tem as suas exceções.
-
-Se um atributo for criado em uma interface ele será `public` e `static`. Os atributos criados na interface não tem relação
-com o que foi definido no objeto.
+Se um atributo for criado em uma interface ele será `public` e `static`. Os atributos criados na interface não tem relação com o que foi definido no objeto.
 
 O atributo na interface assume uma postura `final` isso faz com que não seja alterado durante o processo de execução.
 O comportamento de uma constante.
@@ -650,8 +614,7 @@ A interface é abstrata portanto não pode ser instanciada.
 
 ### Métodos default em interfaces
 
-A partir da versão 8 permite a implementação de métodos dentro da interface. Isso evita que quando uma interface é alterada
-haja a quebra do código já criado.
+A partir da versão 8 permite a implementação de métodos dentro da interface. Isso evita que quando uma interface é alterada haja a quebra do código já criado.
 
 ```java
 public interface StringManipulator {
@@ -666,8 +629,7 @@ public interface StringManipulator {
 O Java por não permitir Herança Múltipla não tinha problema com o diamond problem.
 **Diamond Problem:** quando a subclasse herda de duas classes que possuem métodos com o mesmo nome.
 
-Quando a partir do Java 8 foi permitido criar métodos nas interfaces o diamond problem apareceu, porque é possível implementar
-mais de uma interface numa classe.
+Quando a partir do Java 8 foi permitido criar métodos nas interfaces o diamond problem apareceu, porque é possível implementar mais de uma interface numa classe.
 Para resolver essa questão, ao chamar o método que está em uma interface devemos usar a da seguinte maneira:
 
 ```java
@@ -680,8 +642,7 @@ public class StringManipulatorImpl implements Interface1, Interface2 {
 }
 ```
 
-Veja no exemplo acima que damos o nome da interface da qual queremos o método atribuímos a palavra reservada `super` para 
-indicar que vamos usar o método da interface declarada e depois do ponto passamos o nome do método e os argumentos para seu uso.
+Veja no exemplo acima que damos o nome da interface da qual queremos o método atribuímos a palavra reservada `super` para indicar que vamos usar o método da interface declarada e depois do ponto passamos o nome do método e os argumentos para seu uso.
 
 ### Métodos private e static em interfaces
 
@@ -689,18 +650,15 @@ Para fazer uso de métodos de uma interface devemos declarar os mesmos usando os
 
 O private vai funcionar para métodos que devem ser executados dentro da interface e não serão acessíveis fora dela.
 
-O static pode ser definido quando vai se fazer o uso do método direto na interface e não a sua instância do modo como foi
-concebido na sua origem.
+O static pode ser definido quando vai se fazer o uso do método direto na interface e não a sua instância do modo como foi concebido na sua origem.
 
 Lembrando que o Java permite criar métodos em interfaces com os modificadores de acesso `private`, `default` e `static`.
 
 ## Classes abstratas
 
-Há momentos em que temos classes das quais são definidas para darem uma semântica ao código, mas não tem sentido 
-fazer a sua instância diretamente, sendo que ficara para as suas subclasses essa tarefa.
+Há momentos em que temos classes das quais são definidas para darem uma  semântica ao código, mas não tem sentido fazer a sua instância diretamente, sendo que ficara para as suas subclasses essa tarefa.
 
-Para este caso fazemos o uso de classes abstratas,, assim evita=se que uma classe que não faz sentido instanciar, seja de fato
-instanciada.
+Para este caso fazemos o uso de classes abstratas, assim evita-se que uma classe que não faz sentido instanciar, seja de fato instanciada.
 
 ```java
 public abstract class AbstractClassExample {
@@ -708,17 +666,13 @@ public abstract class AbstractClassExample {
 }
 ```
 
-### métodos abstratos
+### Métodos abstratos
 
-Uma classe abstrata pode ter _métodos abstratos_ estes métodos passam a obrigatoriedade da implementação do método para
-as classes concretas que estão como subclasses da classe abstrata, entretanto, se a classe abstrata tiver métodos, mas não
-tem subclasses, então a definição do método nela se faz obrigatório.
+Uma classe abstrata pode ter _métodos abstratos_ estes métodos passam a obrigatoriedade da implementação do método para as classes concretas que estão como subclasses da classe abstrata, entretanto, se a classe abstrata tiver métodos, mas não tem subclasses, então a definição do método nela se faz obrigatório.
 
-> Todo método abstrato precisa pertencer a uma classe abstrata, mas uma classe abstrata não precisa obrigatóriamente ter
-> métodos abstratos.
+> Todo método abstrato precisa pertencer a uma classe abstrata, mas uma classe abstrata não precisa obrigatóriamente ter métodos abstratos.
 
-Por mais que se tenha uma cadeia de superclasse e suas subclasses e venha ter uma sequencia de classes abstratas e depois 
-na sequência houver uma classe concreta, a classe concreta vai ter que implementar o método.
+Por mais que se tenha uma cadeia de superclasse e suas subclasses e venha ter uma sequencia de classes abstratas e depois na sequência houver uma classe concreta, a classe concreta vai ter que implementar o método.
 
 ```java
 public abstract class AbstractClassExample {
@@ -735,8 +689,7 @@ Ato de uma mesma classe obter diferentes comportamentos em diferentes situaçõe
 
 O polimorfismo pode ser em tempo de execução ou em tempo de compilação.
 
-Pode haver o Method Overloading: que é quando um método com o mesmo nome pode ter e receber prâmetros diferentes resultando 
-em respostas diferentes.
+Pode haver o Method Overloading: que é quando um método com o mesmo nome pode ter e receber prâmetros diferentes resultando em respostas diferentes.
 
 Como ter o Method Overriding: que é quando as subclasses sobrescrevem o método da superclasse.
 
@@ -850,18 +803,12 @@ OBS: conceito fortemente atrelado ou até mesmo dependente do conceito de heran�
 
 ### Casting explicito e instanceof
 
-O Casting explícito assim como com tipos primitivos deve ser usado com cautela, pois tem o mesmo propósito de dizer ao
-compilador que o desenvolvedor sabe o que está fazendo.
+O Casting explícito assim como com tipos primitivos deve ser usado com cautela, pois tem o mesmo propósito de dizer ao compilador que o desenvolvedor sabe o que está fazendo.
 
-Por exemplo, podemos usar casting explícito com classes quando queremos fazer uso de métodos em uma subclasse que não 
-estão definidos na super classe, caso faça uma instância como `Pet p = new Dog()`, entenda que `Pet` é a superclasse e
-`Dog` é a subclasse, nesse caso `p` terá acesso ao métodos definidos em Pet e não vai fazer uso do que está em Dog. Caso
-seja necessário fazer uso de algum método exclusivo de Dog, então pode atribuir um Casting Explícito `Dog d = (Dog) p`.
+Por exemplo, podemos usar casting explícito com classes quando queremos fazer uso de métodos em uma subclasse que não  estão definidos na super classe, caso faça uma instância como `Pet p = new Dog()`, entenda que `Pet` é a superclasse e
+`Dog` é a subclasse, nesse caso `p` terá acesso ao métodos definidos em Pet e não vai fazer uso do que está em Dog. Caso seja necessário fazer uso de algum método exclusivo de Dog, então pode atribuir um Casting Explícito `Dog d = (Dog) p`.
 
-Isso até pode resolver, mas pode trazer um problema, caso queira fazer um Casting para outra subclasse que faz o uso da
-superclasse já instanciada o compilador vai apresentar o erro **ClassCastException**, pois na memória HEAP já foi criada 
-uma instância vinculando aquela superclasse com uma outra subclasse, portanto o uso de `instanceof` pode ajudar a evitar 
-erros: `if(p instanceof Dog){...}`, Caso seja afirmativo que p instanciou o objeto Dog então o casting será realizado.
+Isso até pode resolver, mas pode trazer um problema, caso queira fazer um Casting para outra subclasse que faz o uso da superclasse já instanciada o compilador vai apresentar o erro **ClassCastException**, pois na memória HEAP já foi criada uma instância vinculando aquela superclasse com uma outra subclasse, portanto o uso de `instanceof` pode ajudar a evitar  erros: `if(p instanceof Dog){...}`, Caso seja afirmativo que p instanciou o objeto Dog então o casting será realizado.
 Veja mais no exemplo Abaixo:
 
 ```java
@@ -883,8 +830,7 @@ public class App9 {
 }
 ```
 
-Veja que no exemplo acima se a linha que faz o Casting Explícito para Fish estivesse descomentada o else do if com `instanceof`
-seria executado pois já há um casting para uma classe que não é Dog.
+Veja que no exemplo acima se a linha que faz o Casting Explícito para Fish estivesse descomentada o else do if com `instanceof`seria executado pois já há um casting para uma classe que não é Dog.
 
 ### Casting automático com o operador instanceof
 
@@ -912,13 +858,9 @@ public class App9 {
 ### Definindo Sealed Classes
 
 Por padrão o Java mantém as suas classes extensíveis.
-Podemos restringir quais classes podem implementar uma interface ou podem extender uma classe, com o marcador `sealed`,
-então em seguida deve declarar quais as classes que podem ter acesso por herança da classe selada em questão com o marcador
-`permits`.Ficará como algo do tipo `public abstract sealed class Vehicle permits Car, Bus {...}`.
+Podemos restringir quais classes podem implementar uma interface ou podem extender uma classe, com o marcador `sealed`, então em seguida deve declarar quais as classes que podem ter acesso por herança da classe selada em questão com o marcador`permits`.Ficará como algo do tipo `public abstract sealed class Vehicle permits Car, Bus {...}`.
 
-Então nas classe que foram definidas como permitidas para a herança podemos ou usar o modificar `final` para quando não queremos
-que a superclasse e subclasses sejam herdadas ou definimos com o modificador `non-sealed` para uma subclasse que queremos
-fazer extensão dela dentro da aplicação. Exemplo: `public non-sealed class Car extends Vehicle {...}`.
+Então nas classe que foram definidas como permitidas para a herança podemos ou usar o modificar `final` para quando não queremos que a superclasse e subclasses sejam herdadas ou definimos com o modificador `non-sealed` para uma subclasse que queremos fazer extensão dela dentro da aplicação. Exemplo: `public non-sealed class Car extends Vehicle {...}`.
 
 Para ver um exemplo veja o pacote **br.com.javainsider.partedois.sealed**.
 
@@ -926,14 +868,12 @@ Para ver um exemplo veja o pacote **br.com.javainsider.partedois.sealed**.
 
 ### Criando uma classe para representar dados
 
-Criado para facilitar a criação de clases em que seus atributos não se alteram após a criação do objeto e a passagem de 
-argumentos nele, métodos imutáveis.
+Criado para facilitar a criação de clases em que seus atributos não se alteram após a criação do objeto e a passagem de argumentos nele, métodos imutáveis.
 
 Modo de declarar uma record:
 `public record PersonRecord(String firstName, String lastName, int age){...}`
 
-Veja o pacote **br.com.javainsider.partedois.record**, para verificar o modo de criar atributos imutáveis sem record e 
-com record.
+Veja o pacote **br.com.javainsider.partedois.record**, para verificar o modo de criar atributos imutáveis sem record e com record.
 
 O comportamento e métodos para trabalhar com a classe imutável é o mesmo no momento de instanciar seja com o sem record.
 
@@ -973,14 +913,21 @@ Atributos estáticos,
 ### Inseridos no pacote parteum
 
 - Exfraction.java : br.com.javainsider.parteum.Fraction.java
+
 - br.com.javainsider.parteum.ExWatch.java : br.com.javainsider.parteum.Watch.java : br.com.javainsider.parteum.Pointer.java 
+
 - br.com.javainsider.parteum.ExLamp.java : br.com.javainsider.parteum.Lamp.java
+
 - ExRectangle : Reactangle.java
+
 - br.com.javainsider.parteum.ExNumber.java : br.com.javainsider.parteum.Number.java
   
   ### Inseridos no pacote partedois
+
 - br.com.javainsider.partedois.Pets
+
 - br.com.javainsider.partedois.exaccount
+
 - br.com.javainsider.partedois.exfigure
 
 ## Referências
